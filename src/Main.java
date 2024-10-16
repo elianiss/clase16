@@ -5,20 +5,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        // Eliana Camila Guevara
+
         Scanner entrada = new Scanner(System.in);
         int op;
 
         do {
             System.out.println("1. Circulo");
             System.out.println("2. Piramide");
+            op = entrada.nextInt();
 
             switch (op) {
                 case 1:
-                    Scanner entrada = new Scanner(System.in);
+
                     System.out.print("Ingrese el radio del círculo: ");
                     double radio = entrada.nextDouble();
                     Circulo circulo = new Circulo(radio);
                     System.out.println("El área del círculo es: " + circulo.area());
+                    break;
 
                 case 2:
                     System.out.print("Ingrese el lado de la base de la pirámide: ");
@@ -30,7 +34,8 @@ public class Main {
                     break;
 
             }
-        }
+        } while (op != 3);
+
 
     }
 }
